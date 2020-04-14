@@ -8,20 +8,14 @@ public class DragObject : MonoBehaviour
     public bool Listen;
     private Vector3 moffset;
     private float mZCoord;
+    private bool FirstBool;
     public GameObject Model;
     
     void OnMouseDown()
     {
-        
-        if (Listen == true) {
-            mZCoord = Camera.main.WorldToScreenPoint(Model.transform.position).z;
-            moffset = Model.transform.position - GetMouseWorldPos();
-        }
-        else
-        {
+        mZCoord = Camera.main.WorldToScreenPoint(Model.transform.position).z;
+        moffset = Model.transform.position - GetMouseWorldPos();
 
-        }
-        
     }
 
     private Vector3 GetMouseWorldPos()
@@ -38,10 +32,18 @@ public class DragObject : MonoBehaviour
 
         if (Listen == true)
         {
+            if (FirstBool == false)
+            {
+                mZCoord = Camera.main.WorldToScreenPoint(Model.transform.position).z;
+                moffset = Model.transform.position - GetMouseWorldPos();
+                FirstBool = true;
+            }
             Model.transform.position = GetMouseWorldPos() + moffset;
+
         }
         else
         {
+            FirstBool = false;
             float rotX = Input.GetAxis("Mouse X") * rotSpeed * Mathf.Deg2Rad;
             float rotY = Input.GetAxis("Mouse Y") * rotSpeed * Mathf.Deg2Rad;
 
