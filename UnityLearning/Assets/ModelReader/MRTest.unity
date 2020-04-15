@@ -2261,7 +2261,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e913ab4b902151947bcc2b4a565c5bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 720
+  rotSpeed: 540
   Listen: 0
   Model: {fileID: 946028929}
 --- !u!65 &1764181649
