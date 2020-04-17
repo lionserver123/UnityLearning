@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Book-Page Curl Pro/Test/TestVan.unity
     guid: 5263d5ca95077924eb8dad0ee26870f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Book-Page Curl Pro/Test/TestVanButton.unity
     guid: b96d9b1ac66a59144a7b3cae54f33f88
+  - enabled: 0
+    path: Assets/ModelReader/MRTest.unity
+    guid: c0e5f62842e4a7941bb978635a52d379
   m_configObjects: {}
